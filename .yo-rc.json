@@ -1,0 +1,7 @@
+{
+  "generator-springworks": {
+    "projectName": "splunk charts",
+    "projectDescription": "Renders images based on Splunk searches",
+    "privateProject": false
+  }
+}

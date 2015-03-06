@@ -1,0 +1,34 @@
+{
+  "name": "splunk-charts",
+  "version": "1.0.0",
+  "description": "Renders images based on Splunk searches",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.33"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test istanbul cover --report teamcity --report lcov _mocha -- --ui bdd --check-leaks --recursive --slow 200 --reporter spec --globals 'Intl,IntlPolyfill' test",
+    "lint": "eslint .",
+    "coveralls": "NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Springworks/node-splunk-charts.git"
+  },
+  "author": "Springworks",
+  "bugs": {
+    "url": "https://github.com/Springworks/node-splunk-charts/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "buddy.js": "^0.8.0",
+    "coveralls": "^2.11.2",
+    "eslint": "^0.11.0",
+    "istanbul": "^0.3.5",
+    "jsinspect": "^0.4.0",
+    "mocha": "^2.1.0",
+    "should": "^4.6.0"
+  }
+}
