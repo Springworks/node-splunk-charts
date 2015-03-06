@@ -22,6 +22,7 @@
     "url": "https://github.com/Springworks/node-splunk-charts/issues"
   },
   "dependencies": {
+    "joi": "^6.0.3",
     "request": "^2.53.0"
   },
   "devDependencies": {
