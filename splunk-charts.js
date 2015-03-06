@@ -27,11 +27,14 @@ exports.create = function(splunk_config) {
   validated_splunk_config = internals.validateSplunkConfig(splunk_config);
 
   for (key in externals) {
-    fn = externals[key];
-    if (typeof fn === 'function') {
-      fn.bind(null, validated_splunk_config);
+    if (externals.hasOwnProperty(key)) {
+      fn = externals[key];
+      if (typeof fn === 'function') {
+        fn.bind(null, validated_splunk_config);
+      }
     }
   }
+
   return externals;
 };
 
